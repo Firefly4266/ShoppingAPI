@@ -31,7 +31,7 @@ namespace ShoppingAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<IdentityDbContext>(options => 
-                options.UseSqlServer("Data Source=users.sqlserver",
+                options.UseSqlServer("Data Source=ICONMOBILE/SQLEXPRESS01;Initial Catalog=ShoppingAPI;Integrated Security=True",
                     optionsBuilder => optionsBuilder.MigrationsAssembly("ShoppingAPI")));
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDbContext>()
